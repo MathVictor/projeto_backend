@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda Eletrônica - UTFPR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1 class="main-title">Agenda Eletrônica</h1>
+
+    </div>
+
+    <form id="eventForm">
+      <input type="text" id="title" placeholder="Título do evento" required />
+      <input type="datetime-local" id="date" required />
+      <input type="text" id="userId" placeholder="👤 ID do usuário" required />
+      <button type="submit">💾 Salvar Evento</button>
+    </form>
+
+    <div class="search-area">
+      <input type="text" id="searchUserId" placeholder="🔍 Buscar compromissos por ID" />
+      <button id="searchBtn">Buscar</button>
+    </div>
+
+    <h3 id="searchResultTitle" class="search-result hidden"></h3>
+    <div id="eventList" class="event-list hidden"></div>
+  </div>
+
+  <div id="popupOverlay" class="popup-overlay hidden">
+    <div class="popup">
+      <button class="popup-close" onclick="closePopup()">✖</button>
+      <h2>✅ Evento salvo com sucesso</h2>
+      <p>Seu evento está agora na linha do tempo da Agenda Eletrônica.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
